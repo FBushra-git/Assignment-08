@@ -3,6 +3,7 @@
 import { createAuthClient } from "better-auth/react";
 
 export const authClient = createAuthClient({
+  //vercel live link 
   baseURL: "https://tilesgallery.vercel.app",
 });
 
