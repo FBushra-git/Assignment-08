@@ -4,7 +4,7 @@ import { FiInstagram, FiTwitter, FiFacebook, FiMail, FiPhone, FiMapPin } from "r
 
 export default function Footer() {
   return (
-    <footer className="bg-clay-900 text-clay-200">
+    <footer className="bg-clay-600 text-clay-200 mt-10">
       <div className="max-w-7xl mx-auto px-4 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
         {/* Brand */}
@@ -16,7 +16,7 @@ export default function Footer() {
             </div>
             <span className="font-display font-bold text-white">Tiles Gallery</span>
           </div>
-          <p className="text-clay-400 text-sm leading-relaxed">
+          <p className="text-white text-sm leading-relaxed">
             Curating the world&apos;s finest tiles for homeowners, designers, and architects.
           </p>
           {/* Social links */}
@@ -46,7 +46,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {["/", "/all-tiles", "/login", "/register", "/my-profile"].map((href) => (
               <li key={href}>
-                <Link href={href} className="text-clay-400 hover:text-clay-100 transition-colors capitalize">
+                <Link href={href} className="text-white hover:text-black transition-colors capitalize">
                   {href === "/" ? "Home" : href.replace("/", "").replace("-", " ")}
                 </Link>
               </li>
@@ -56,10 +56,10 @@ export default function Footer() {
 
         {/* Categories */}
         <div>
-          <h4 className="font-display font-semibold text-white mb-4">Categories</h4>
-          <ul className="space-y-2 text-sm text-clay-400">
+          <h4 className="font-display font-semibold text-white  mb-4">Categories</h4>
+          <ul className="space-y-2 text-sm   ">
             {["Ceramic","Marble","Terracotta","Mosaic","Zellige","Hexagon"].map(c => (
-              <li key={c}>{c}</li>
+              <li key={c} className="text-white hover:text-black transition-colors capitalize cursor-pointer">{c}</li>
             ))}
           </ul>
         </div>
@@ -67,7 +67,7 @@ export default function Footer() {
         {/* Contact Us */}
         <div>
           <h4 className="font-display font-semibold text-white mb-4">Contact Us</h4>
-          <ul className="space-y-3 text-sm text-clay-400">
+          <ul className="space-y-3 text-sm text-white ">
             <li className="flex items-start gap-2">
               <FiMail size={14} className="mt-0.5 shrink-0" />
               <a href="mailto:hello@tilesgallery.com" className="hover:text-clay-100">hello@tilesgallery.com</a>
@@ -86,7 +86,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-clay-800 py-4 px-4">
-        <p className="text-center text-clay-500 text-xs">
+        <p className="text-center text-white  text-xs">
           © {new Date().getFullYear()} Tiles Gallery. All rights reserved. Made with love for design lovers.
         </p>
       </div>

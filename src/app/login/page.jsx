@@ -67,11 +67,11 @@ export default function LoginPage() {
           sizes="50vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-clay-900/80 to-clay-700/50 flex flex-col justify-end p-12">
-          <p className="font-display text-3xl text-white leading-snug mb-2">
+        <div className="absolute inset-0 text-center flex flex-col justify-start p-12">
+          <p className="font-display text-3xl text-white text-bold leading-snug mb-2">
             &ldquo;Every tile tells a story<br />of craft and dedication.&rdquo;
           </p>
-          <span className="text-clay-300 text-sm">— Tiles Gallery</span>
+          <span className="text-clay-400 text-sm">— Tiles Gallery</span>
         </div>
       </div>
 
