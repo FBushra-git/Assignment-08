@@ -1,4 +1,4 @@
-import tiles from "@/data/tiles.json";
+import tiles from "../data/tiles.json";
 
 export async function getAllTiles() {
   return tiles;
