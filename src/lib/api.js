@@ -9,5 +9,5 @@ export async function getTileById(id) {
 }
 
 export async function getFeaturedTiles() {
-  return tiles.sort((a, b) => b.rating - a.rating).slice(0, 4);
-}
+  return [...tiles].sort((a, b) => b.rating - a.rating).slice(0, 4);
+} 

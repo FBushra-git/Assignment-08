@@ -10,8 +10,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import TileCard, { TileCardSkeleton } from "@/components/TileCard";
-import { getFeaturedTiles } from "@/lib/api";
+
 import { FiArrowRight, FiPackage, FiStar, FiAward } from "react-icons/fi";
+import { getFeaturedTiles } from "@/lib/api";
 
 const SLIDES = [
   {
@@ -54,12 +55,15 @@ export default function HomePage() {
   const [featured, setFeatured] = useState([]);
   const [loading, setLoading]   = useState(true);
 
-  useEffect(() => {
-    getFeaturedTiles()
-      .then(setFeatured)
-      .catch(console.error)
-      .finally(() => setLoading(false));
-  }, []);
+useEffect(() => {
+  getFeaturedTiles()
+    .then((data) => {
+      console.log("Featured:", data); // debug
+      setFeatured(data || []);
+    })
+    .catch(console.error)
+    .finally(() => setLoading(false));
+}, []);
 
   return (
     <div className="page-enter">
